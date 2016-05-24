@@ -1,0 +1,33 @@
+<form>
+<div *ngIf="newTimesheetEntry" class="form-group">
+    <div class="form-group">
+        <label>Task: </label>
+        <input [(ngModel)]="newTimesheetEntry.Task" placeholder="Enter Task Name" class="form-control"   />
+
+    </div>
+    <div class="form-group">
+        <label>Type: </label>
+        <select [(ngModel)]="newTimesheetEntry.Type" class="form-control">
+            
+            <option value="1">Sprint</option>
+            <option value="2">Ad-hoc</option>
+            <option value="3">Discussion</option>
+            <option value="4">Planning</option>
+            
+        </select>
+    </div>
+    <div class="form-group">
+        <label>Description: </label>
+        <textarea [(ngModel)]="newTimesheetEntry.Description" placeholder="Provide task description" class="form-control"></textarea>
+    </div>
+    <div class="form-group">
+        <label>Hours: </label>
+        <input type="number" [(ngModel)]="newTimesheetEntry.Hours" placeholder="Provide Task Type"  class="form-control"/>
+    </div>
+<field is="float-label" label="Your name" type="text" id="name" name="name" placeholder="Your name" tabindex="1"></field>
+
+<button (click)="save()">Save</button> 
+<button (click)="saveAndRedirect('ExistingTimesheetEntiries')">Save and Navigate to List</button>
+
+</div>
+</form>

@@ -1,0 +1,22 @@
+<div *ngIf="timesheetEntiries" class="form-group">
+
+    <table class="table">
+        <tr>
+            <th>ID</th>
+            <th>Task</th>
+            <th>Type</th>
+            <th>Description</th>
+            <th>Hours</th>
+        </tr>
+        <tr *ngFor="let timesheetEntry of timesheetEntiries" >
+            <td>{{timesheetEntry.Id}}</td>
+            <td>{{timesheetEntry.Task}}</td>
+            <td>{{timesheetEntry.Type}}</td>
+            <td>{{timesheetEntry.Description}}</td>
+            <td>{{timesheetEntry.Hours}}</td>
+        </tr>
+    </table>
+
+    <button (click)="save()">New Timesheet Entry</button>
+
+</div>

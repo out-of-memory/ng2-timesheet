@@ -1,0 +1,24 @@
+<form>
+<div *ngIf="model" class="form-group">
+    <div class="form-group">
+        <label>Address: </label>
+        <input [(ngModel)]="model.Address" placeholder="Enter Address" class="form-control"   />
+
+    </div>
+
+    <div class="form-group">
+        <label>Middle Name: </label>
+        <input [(ngModel)]="model.City" placeholder="Enter Your City" class="form-control"   />
+
+    </div>
+
+    <div class="form-group">
+        <label>Last Name: </label>
+        <input [(ngModel)]="model.Zip" placeholder="Enter Your Zip" class="form-control"   />
+
+    </div>
+<button (click)="save()">Save</button> 
+<button (click)="saveAndRedirect('ExistingTimesheetEntiries')">Save and Navigate to List</button>
+
+</div>
+</form>
